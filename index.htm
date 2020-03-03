@@ -8,5 +8,8 @@
 	<h1>Inject this HTML as innerHTML</h1>
 	<textarea id="t"></textarea>
 	<button onclick="document.documentElement.innerHTML = document.getElementById('t').value;">Inject</button>
+	
+	<div id="autorun"></div>
+	<script>document.getElementById('autorun').innerHTML = new URL(window.location.href).searchParams.get('autorun');</script>
 </body>
 </html>
